@@ -22,50 +22,37 @@ include('../libraries/conexion.php');
         <div class="row">
           <div class="col-6">
             <h5>Ingrese sus nombres</h5>
-            <input type="text" class="form-control input" placeholder="Nombres" name="Nombres">
+            <input type="text" class="form-control input" placeholder="Nombre" name="Nombre">
           </div>
           <div class="col-6">
             <h5>Ingrese sus Apellidos</h5>
-            <input type="text" class="form-control input" placeholder="Apellidos" name="Apellidos">
+            <input type="text" class="form-control input" placeholder="Apellido" name="Apellido">
           </div>
         </div>
         <br>
         <br>
         <div class="row">
           <div class="col-6">
-              <h5>Ingrese su Tipo de Documento</h5>
-                <select name="TipoDocumento" class="form-select input">
-                    <option placeholder="Tipo de documento"></option>
-                    <option>Tarjeta de identidad</option>
-                    <option>Cédula</option>
-                    <option>Cédula de extranjería</option>
-                  </select>
+              <h5>Ingrese su Teléfono</h5>
+                <input type="tel" class="form-control input" placeholder="Teléfono" name="Telefono">
             </div>
             <div class="col-6">
               <h5>Ingrese su Número de Documento</h5>
-                <input type="tel" class="form-control input" placeholder="Numero de telefono" name="Numerotelefono">
+                <input type="tel" class="form-control input" placeholder="Numero de documento" name="Id_Empleado">
             </div>
+        </div>
           <br>
           <br>
         </form> 
         <div class="row">
           <div class="col-6">
-              <button class="boton" name="EnviarD">Enviar</button>
+              <button class="boton" name="EnviarD" type="submit">Enviar</button>
           </div>
           <div class="col-6">
             <button class="boton"><a style="color:white;" href="index/index.php">Volver</a></button>
           </div>
+          
         </div>
     </div>
-    <?php
-      $Idempleado = $_POST['numero_documento'];
-      $nombre = $_POST['Nombres'];
-      $apellidos =$_POST['Apellidos'];
-      $pass = $_POST['pass'];
-      $TipoDoc = $_POST['TipoDocumento'];
-      $Nrotel = $_POST['Numerotelefono'];
-      
-      $queryusuario = mysqli_query($mysql,"SELECT * FROM tbl_usuarios WHERE id_Empleado" ) 
-      ?>
 </body>
 </html>
