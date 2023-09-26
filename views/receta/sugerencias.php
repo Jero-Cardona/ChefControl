@@ -19,5 +19,32 @@
             </div>
         </div>
     </div>
+    <div class="container" style="background-color: #D5D5D5;">
+        <div class="encabezado">
+            <h2 class="titulo">Sugerir Recetas</h2>
+        </div>
+        <form>
+            <div class="row">
+                <h5>Ingrese el nombre de la receta</h5>
+            <input type="text" class="form-control input" name="nombre-rec">
+            </div>
+            <div class="row">
+                <h5>Ingrese los ingredientes</h5>
+            <textarea cols="15" rows="6" name="ingredientes"></textarea>
+            </div>
+            <div class="row">
+                <h5>Ingrese la preparación</h5>
+            <textarea cols="20" rows="8" name="preparacion"></textarea>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-6">
+                <button class="boton" name="EnviarD">Enviar</button>
+            </div>
+            <div class="col-6">
+                <button class="boton"><a style="color:white;" href="recetas.html">Volver</a></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
