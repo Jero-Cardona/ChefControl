@@ -1,3 +1,7 @@
+<?php
+//Para registrar
+include('../libraries/conexion.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,22 +19,24 @@
         <h1 class="titulo">Inicio de sesión</h1>
       </div>
       <br>
-    <form>
+    <form action="login.php" method="POST" name="formLogin">
       <div class="row">
           <h5> Ingrese su tipo de usuario</h5>
           <div class="col-6">
-              <select class="form-select input">
-                  <option placeholder="Tipo de documento"></option>
+              <select class="form-select input" name="TipoDocumento> 
+              <option placeholder="Tipo de documento" required></option>
                   <option>Tarjeta de identidad</option>
                   <option>Cédula</option>
                   <option>Cédula de extranjería</option>
                 </select>
+                <input type="hidden" class="form-control input" name="id_Empleado" required>
+                <br>
                 <br>
           <h5> Ingrese su número de documento</h5>
-                <input type="tel" class="form-control input" name="numero_documento" placeholder="Numero de documento">
+                <input type="tel" class="form-control input" name="numero_documento" placeholder="Numero de documento" required>
                 <br>
             <h5> Ingrese su contraseña</h5>
-                <input type="password" class="form-control input" name="pass" placeholder="Ingrese su contraseña">
+                <input type="password" class="form-control input" name="pass" placeholder="Ingrese su contraseña" required >
                 <br>
             </div>
             <br>
@@ -47,8 +53,6 @@
             </div>
           </div>
         </form> 
-        
       </div>
-      
     </body>
     </html>

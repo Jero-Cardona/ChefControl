@@ -13,5 +13,5 @@ class Conexion{
     }
 }
 
-print_r(Conexion::conect());
+//print_r(Conexion::conect());
 ?>

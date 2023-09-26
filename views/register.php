@@ -1,3 +1,7 @@
+<?php
+//Para registrar
+include('../libraries/conexion.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +34,7 @@
         <div class="row">
           <div class="col-6">
               <h5>Ingrese su Tipo de Documento</h5>
-                <select name="TipoDoc" class="form-select input">
+                <select name="TipoDocumento" class="form-select input">
                     <option placeholder="Tipo de documento"></option>
                     <option>Tarjeta de identidad</option>
                     <option>Cédula</option>
@@ -39,7 +43,7 @@
             </div>
             <div class="col-6">
               <h5>Ingrese su Número de Documento</h5>
-                <input type="tel" class="form-control input" placeholder="Numero de documento" name="NumeroDocumento">
+                <input type="tel" class="form-control input" placeholder="Numero de telefono" name="Numerotelefono">
             </div>
           <br>
           <br>
@@ -53,5 +57,15 @@
           </div>
         </div>
     </div>
+    <?php
+      $Idempleado = $_POST['numero_documento'];
+      $nombre = $_POST['Nombres'];
+      $apellidos =$_POST['Apellidos'];
+      $pass = $_POST['pass'];
+      $TipoDoc = $_POST['TipoDocumento'];
+      $Nrotel = $_POST['Numerotelefono'];
+      
+      $queryusuario = mysqli_query($mysql,"SELECT * FROM tbl_usuarios WHERE id_Empleado" ) 
+      ?>
 </body>
 </html>
