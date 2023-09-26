@@ -1,5 +1,5 @@
 <?php
-require "../templade/header.php";
+require "../templade/headerR.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
