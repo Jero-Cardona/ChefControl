@@ -1,3 +1,6 @@
+<?php
+require "../templade/header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +17,7 @@
         <div class="row">
             <div class="col-4" >
               <div class="card" style="width: 22rem; margin-top: 30px;">
-                  <img src="../img/receta1.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                  <img src="../../img/receta1.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                   <div class="card-body">
                        <h5 class="card-title">Receta</h5>
                        <p class="card-text">Bizcocho de espinacas con mascarpone</p>
@@ -24,7 +27,7 @@
            </div>
            <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta2.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta2.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Pastel de pescado y acederas</p>
@@ -34,7 +37,7 @@
          </div>
          <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta3.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta3.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Hojaldre de pescado</p>
@@ -44,7 +47,7 @@
          </div>
          <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta4.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta4.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Croquetas de cabrales</p>
@@ -54,7 +57,7 @@
          </div>
          <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta5.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta5.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Dip de Cheddar y brócoli</p>
@@ -64,7 +67,7 @@
          </div>
          <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta6.png" class="card-img-top" style="height: 450px;" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta6.png" class="card-img-top" style="height: 450px;" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Pastel de queso y coliflor</p>
@@ -74,7 +77,7 @@
          </div>
          <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta7.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta7.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Mutabbaq o pastel de queso dulce</p>
@@ -84,7 +87,7 @@
          </div>
          <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta8.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta8.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Tarta de champiñones</p>
@@ -94,7 +97,7 @@
          </div>
          <div class="col-4">
             <div class="card" style="width: 22rem; margin-top: 30px;">
-                <img src="../img/receta9.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
+                <img src="../../img/receta9.png" class="card-img-top" style="height: 450px;" alt="imagen receta">
                 <div class="card-body">
                      <h5 class="card-title">Receta</h5>
                      <p class="card-text">Tortilla de patatas con espinacas y queso feta</p>
@@ -104,5 +107,8 @@
          </div>
         </div>     
     </div>
+<?php
+require "../templade/footer.php";
+?>
 </body>
 </html>
