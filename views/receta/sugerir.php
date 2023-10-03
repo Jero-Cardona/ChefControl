@@ -36,9 +36,12 @@ require "../templade/headerR.php";
                 <button class="boton" name="EnviarD">Enviar</button>
             </div>
             <div class="col-6">
-                <button class="boton"><a style="color:white;" href="recetas.html">Volver</a></button>
+                <button class="boton"><a style="color:white;" href="receta.php">Volver</a></button>
             </div>
         </div>
     </div>
+<?php
+require "../templade/footer.php";
+?>
 </body>
 </html>

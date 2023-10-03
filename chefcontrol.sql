@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-09-2023 a las 22:36:12
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 8.1.17
+-- Tiempo de generación: 03-10-2023 a las 05:19:10
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -171,50 +171,6 @@ CREATE TABLE `tbl_detalleventas` (
   `Estado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `tbl_detalleventas`
---
-
-INSERT INTO `tbl_detalleventas` (`Consecutivo`, `Nro_Factura`, `Cod_Producto`, `Cantidad`, `Precio_Venta`, `Estado`) VALUES
-(1, 1, 1, 1000, 2000, 0),
-(2, 2, 2, 205, 5000, 0),
-(3, 3, 3, 280, 6000, 0),
-(4, 4, 4, 1200, 4500, 0),
-(5, 5, 5, 2500, 6500, 0),
-(7, NULL, NULL, 0, NULL, 0),
-(8, NULL, NULL, 5, NULL, 0),
-(9, NULL, NULL, 2, NULL, 0),
-(10, NULL, NULL, 2, NULL, 0),
-(11, NULL, NULL, 2, NULL, 0),
-(12, NULL, NULL, 2, NULL, 0),
-(13, NULL, NULL, 8, NULL, 0),
-(14, NULL, NULL, 2, NULL, 0),
-(15, NULL, NULL, 11, NULL, 0),
-(16, NULL, NULL, 7, NULL, 0),
-(17, NULL, NULL, 3, NULL, 0),
-(18, NULL, NULL, 0, NULL, 0),
-(19, NULL, NULL, 0, NULL, 0),
-(20, NULL, NULL, 0, NULL, 0),
-(21, NULL, NULL, 0, NULL, 0),
-(22, NULL, NULL, 0, NULL, 0),
-(23, NULL, NULL, 0, NULL, 0),
-(24, NULL, NULL, 3, NULL, 0),
-(25, NULL, NULL, 3, NULL, 0),
-(26, NULL, NULL, 22, NULL, 1),
-(27, NULL, NULL, 22, NULL, 1),
-(28, NULL, NULL, 3, NULL, 0),
-(29, NULL, NULL, 2, NULL, 0),
-(30, NULL, NULL, 2, NULL, 0),
-(31, NULL, NULL, 2, NULL, 0),
-(32, NULL, NULL, 2, NULL, 0),
-(33, NULL, NULL, 2, NULL, 0),
-(34, NULL, NULL, 12, NULL, 0),
-(35, NULL, NULL, 0, NULL, 0),
-(36, NULL, NULL, 2, NULL, 0),
-(37, NULL, NULL, 0, NULL, 0),
-(38, NULL, NULL, 3, NULL, 0),
-(39, NULL, NULL, 0, NULL, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -225,13 +181,8 @@ CREATE TABLE `tbl_detallevento` (
   `Consecutivo` int(11) NOT NULL,
   `Factura_Nro` int(11) NOT NULL,
   `Cod_Producto` int(11) NOT NULL,
-  `Cupos` int(11) NOT NULL,
-  `Precio_Venta` int(11) NOT NULL,
-  `Fecha` date NOT NULL,
-  `Hora_Inicio` time NOT NULL,
-  `Hora_Fin` time NOT NULL,
-  `Descripcion` varchar(200) DEFAULT NULL,
-  `Imagen` longblob NOT NULL
+  `Cantidad` int(11) NOT NULL,
+  `Precio_Venta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -267,17 +218,6 @@ CREATE TABLE `tbl_producto` (
   `Existencia` int(11) NOT NULL,
   `IVA` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tbl_producto`
---
-
-INSERT INTO `tbl_producto` (`Cod_Producto`, `Nombre`, `Stock_Minimo`, `Stock_Maximo`, `Fecha_Vencimiento`, `Costo`, `Cod_Tipo`, `Ubicacion`, `Cod_UMedida`, `Precio_Venta`, `Existencia`, `IVA`) VALUES
-(1, 'cafe expreso', 1, 100, '2023-04-04', 3000, 1, 'tienda del cafe', 3, 4000, 200, 760),
-(2, 'cafe negro', 1, 100, '2023-05-04', 2000, 2, 'tienda del cafe', 3, 3000, 100, 570),
-(3, 'torta zanahoria', 1, 100, '2023-04-04', 2000, 3, 'tienda del cafe', 2, 5000, 7, 950),
-(4, 'brownie con helado', 1, 20, '2023-04-04', 4500, 4, 'la tienda del cafe', 2, 6000, 40, 1140),
-(5, 'tinto', 1, 30, '2023-04-04', 500, 5, 'la tienda del cafe', 3, 2000, 200, 380);
 
 -- --------------------------------------------------------
 
@@ -390,24 +330,12 @@ CREATE TABLE `tbl_ventas` (
 --
 
 INSERT INTO `tbl_ventas` (`Factura_Nro`, `Fecha`, `Id_Cliente`, `Id_Bodega`, `Neto`, `IVA`, `Forma_Pago`) VALUES
+(0, '0000-00-00', NULL, NULL, NULL, NULL, NULL),
 (1, '2023-09-28', 1, 1, 800000, 152000, 'efectivo'),
 (2, '2023-04-15', 2, 2, 1000000, 190000, 'efectivo'),
 (3, '2023-12-30', 3, 3, 1200000, 228000, 'tarjeta credito'),
 (4, '2023-10-02', 4, 4, 620000, 117800, 'tarjeta debito'),
-(5, '2023-05-08', 5, 5, 2200000, 418000, 'efectivo'),
-(6, '2023-08-29', NULL, NULL, NULL, NULL, NULL),
-(7, '2023-08-29', NULL, NULL, NULL, NULL, NULL),
-(8, '2023-09-13', NULL, NULL, NULL, NULL, NULL),
-(9, '2023-09-12', NULL, NULL, NULL, NULL, NULL),
-(10, '2023-09-18', NULL, NULL, NULL, NULL, NULL),
-(11, '2023-09-20', NULL, NULL, NULL, NULL, NULL),
-(12, '2023-09-05', NULL, NULL, NULL, NULL, NULL),
-(13, '2023-09-17', NULL, NULL, NULL, NULL, NULL),
-(14, '2023-09-12', NULL, NULL, NULL, NULL, NULL),
-(15, '2023-09-11', NULL, NULL, NULL, NULL, NULL),
-(16, '0000-00-00', NULL, NULL, NULL, NULL, NULL),
-(17, '2023-09-14', NULL, NULL, NULL, NULL, NULL),
-(18, '2023-09-22', NULL, NULL, NULL, NULL, NULL);
+(5, '2023-05-08', 5, 5, 2200000, 418000, 'efectivo');
 
 --
 -- Índices para tablas volcadas
@@ -515,7 +443,9 @@ ALTER TABLE `tbl_producto`
   ADD PRIMARY KEY (`Cod_Producto`),
   ADD KEY `Cod_Producto` (`Cod_Producto`),
   ADD KEY `Cod_UMedida` (`Cod_UMedida`),
-  ADD KEY `Cod_Tipo` (`Cod_Tipo`);
+  ADD KEY `Cod_Tipo` (`Cod_Tipo`),
+  ADD KEY `Cod_UMedida_2` (`Cod_UMedida`),
+  ADD KEY `Cod_Tipo_2` (`Cod_Tipo`);
 
 --
 -- Indices de la tabla `tbl_proveedores`
@@ -622,7 +552,7 @@ ALTER TABLE `tbl_detalletraslado`
 -- AUTO_INCREMENT de la tabla `tbl_detalleventas`
 --
 ALTER TABLE `tbl_detalleventas`
-  MODIFY `Consecutivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `Consecutivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_detallevento`
@@ -635,12 +565,6 @@ ALTER TABLE `tbl_detallevento`
 --
 ALTER TABLE `tbl_ordenproduccion`
   MODIFY `Consecutivo` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `tbl_ventas`
---
-ALTER TABLE `tbl_ventas`
-  MODIFY `Factura_Nro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas
@@ -664,6 +588,7 @@ ALTER TABLE `tbl_ajuste`
 -- Filtros para la tabla `tbl_compra`
 --
 ALTER TABLE `tbl_compra`
+  ADD CONSTRAINT `tbl_compra_ibfk_1` FOREIGN KEY (`Nro_Factura`) REFERENCES `tbl_ventas` (`Factura_Nro`) ON UPDATE CASCADE,
   ADD CONSTRAINT `tbl_compra_ibfk_2` FOREIGN KEY (`NIT_Proveedor`) REFERENCES `tbl_proveedores` (`NIT_Proveedor`) ON DELETE CASCADE,
   ADD CONSTRAINT `tbl_compra_ibfk_3` FOREIGN KEY (`Id_Empleado`) REFERENCES `tbl_usuarios` (`Id_Empleado`) ON DELETE CASCADE,
   ADD CONSTRAINT `tbl_compra_ibfk_4` FOREIGN KEY (`Id_Bodega`) REFERENCES `tbl_bodega` (`Id_Bodega`) ON DELETE CASCADE;
@@ -699,15 +624,14 @@ ALTER TABLE `tbl_detalletraslado`
 -- Filtros para la tabla `tbl_detalleventas`
 --
 ALTER TABLE `tbl_detalleventas`
-  ADD CONSTRAINT `tbl_detalleventas_ibfk_1` FOREIGN KEY (`Cod_Producto`) REFERENCES `tbl_producto` (`Cod_Producto`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `tbl_detalleventas_ibfk_2` FOREIGN KEY (`Nro_Factura`) REFERENCES `tbl_ventas` (`Factura_Nro`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `tbl_detalleventas_ibfk_1` FOREIGN KEY (`Cod_Producto`) REFERENCES `tbl_producto` (`Cod_Producto`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tbl_detallevento`
 --
 ALTER TABLE `tbl_detallevento`
-  ADD CONSTRAINT `tbl_detallevento_ibfk_2` FOREIGN KEY (`Cod_Producto`) REFERENCES `tbl_producto` (`Cod_Producto`) ON DELETE CASCADE,
-  ADD CONSTRAINT `tbl_detallevento_ibfk_3` FOREIGN KEY (`Factura_Nro`) REFERENCES `tbl_ventas` (`Factura_Nro`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `tbl_detallevento_ibfk_1` FOREIGN KEY (`Factura_Nro`) REFERENCES `tbl_ventas` (`Factura_Nro`) ON DELETE CASCADE,
+  ADD CONSTRAINT `tbl_detallevento_ibfk_2` FOREIGN KEY (`Cod_Producto`) REFERENCES `tbl_producto` (`Cod_Producto`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `tbl_ordenproduccion`
@@ -715,6 +639,13 @@ ALTER TABLE `tbl_detallevento`
 ALTER TABLE `tbl_ordenproduccion`
   ADD CONSTRAINT `tbl_ordenproduccion_ibfk_1` FOREIGN KEY (`Id_Empleado`) REFERENCES `tbl_usuarios` (`Id_Empleado`) ON DELETE CASCADE,
   ADD CONSTRAINT `tbl_ordenproduccion_ibfk_2` FOREIGN KEY (`Id_Cliente`) REFERENCES `tbl_cliente` (`Id_Cliente`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `tbl_producto`
+--
+ALTER TABLE `tbl_producto`
+  ADD CONSTRAINT `tbl_producto_ibfk_1` FOREIGN KEY (`Cod_UMedida`) REFERENCES `tbl_umedida` (`Cod_UMedida`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `tbl_producto_ibfk_2` FOREIGN KEY (`Cod_Tipo`) REFERENCES `tbl_tipoproducto` (`Cod_Tipo`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tbl_traslado`

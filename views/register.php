@@ -51,7 +51,6 @@ include('../libraries/conexion.php');
           <div class="col-6">
             <button class="boton"><a style="color:white;" href="index/index.php">Volver</a></button>
           </div>
-          
         </div>
     </div>
 </body>

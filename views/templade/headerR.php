@@ -29,14 +29,13 @@
         </li>
       </ul>
       <div class="btn-group">
-  <button type="button" class="btn btn-dark dropdown-toggle" style="background-color: #FF6600;" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"> Opciones de Usuario</button>
+  <button type="button" class="btn btn-dark dropdown-toggle" style="background-color: #FF6600;" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Opciones de Usuario</button>
   <ul class="dropdown-menu dropdown-menu-lg-end">
     <li><a class="dropdown-item" href="#">Seccion Inventario</a></li>
     <li><a class="dropdown-item" href="../receta/receta.php">Seccion Recetas</a></li>
     <li><a class="dropdown-item" href="#">Ordenes de produccion</a></li>
   </ul>
 </div>
-
     </div>
   </div>
 </nav>

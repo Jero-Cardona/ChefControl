@@ -10,44 +10,42 @@ require "../templade/headerR.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" href="img/logo.jpeg">
-    <title>Sugerencias</title>
 </head>
 <body>
-    <div class="container" style="background-color: #D5D5D5;">
-        <div class="encabezado">
-            <h2 class="titulo">Sugerencias</h2>
-        </div>
-        <div class="row">
-            <div class="col-4">
-            </div>
-        </div>
-    </div>
-    <div class="container" style="background-color: #D5D5D5;">
-        <div class="encabezado">
-            <h2 class="titulo">Sugerir Recetas</h2>
-        </div>
-        <form>
-            <div class="row">
-                <h5>Ingrese el nombre de la receta</h5>
-            <input type="text" class="form-control input" name="nombre-rec">
-            </div>
-            <div class="row">
-                <h5>Ingrese los ingredientes</h5>
-            <textarea cols="15" rows="6" name="ingredientes"></textarea>
-            </div>
-            <div class="row">
-                <h5>Ingrese la preparación</h5>
-            <textarea cols="20" rows="8" name="preparacion"></textarea>
-            </div>
-        </form>
-        <div class="row">
-            <div class="col-6">
-                <button class="boton" name="EnviarD">Enviar</button>
-            </div>
-            <div class="col-6">
-                <button class="boton"><a style="color:white;" href="recetas.html">Volver</a></button>
-            </div>
-        </div>
-    </div>
+    <div class="container aling-items-center" style="margin-top: 50px;">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+</ul>
+<ul class="list-group list-group-horizontal-md">
+  <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+</ul>
+<ul class="list-group list-group-horizontal-lg">
+  <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+</ul>
+<ul class="list-group list-group-horizontal-xl">
+    <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+</ul>
+<ul class="list-group list-group-horizontal-xxl">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+</div>
+</ul>
+<?php
+require "../templade/footer.php";
+?>
 </body>
 </html>
