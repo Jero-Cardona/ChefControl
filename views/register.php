@@ -1,5 +1,5 @@
 <?php
-//Para registrar
+//Para registrar los datos en la BD
 include('../libraries/conexion.php');
 ?>
 <!DOCTYPE html>
