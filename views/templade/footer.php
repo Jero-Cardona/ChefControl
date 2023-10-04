@@ -1,3 +1,3 @@
-<script src="http://localhost/ChefControl/assets/js/bootstrap.min.js" ></script>
+<script src="http://localhost/proyectoChef/ChefControl/assets/js/bootstrap.min.js" ></script>
 </body>
 </html>
