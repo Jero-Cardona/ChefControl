@@ -1,7 +1,7 @@
 <?php
 require "../templade/headerR.php";
 ?>
-    <div class="container d-inline-block" style="margin: 60px;">
+    <div class="container d-flexbox" style="margin: 60px;">
         <form id="frmRecetaE">
             <div class="mb-3 p-1">
                 <label for="NameReceta" class="form-label">Nombre de la receta</label>
@@ -21,7 +21,7 @@ require "../templade/headerR.php";
                 <input type="checkbox" class="form-check-input" id="checkmeout">
                 <label class="form-check-label" for="checkmeout">Estoy de Acuerdo con los terminos y condicines</label>
             </div>
-            <button type="submit" class="btn btn-info"><i class="fa-solid fa-floppy-disk"></i> Enviar Registro</button>
+            <button type="submit" class="btn btn-primary" style="background-color: #FF6600;" ><i class="fa-solid fa-floppy-disk"></i> Enviar Registro</button>
         </form>
     </div>
 <?php

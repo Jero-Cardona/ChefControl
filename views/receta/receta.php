@@ -12,19 +12,19 @@ require "../templade/headerR.php";
     <link rel="icon" href="img/logo.jpeg">
 </head>
 <body>
-<div class="container d-flexbox" style="padding-top: 50px;">
+<div class="container d-flexbox" style="margin-top: 50px;">
     <div class="row">
     <div class="col-4 d-block">
-        <p class="pE">Te gustaria agregar/Estandarizar una nueva receta</p>
-        <a href="EsReceta.php" class="btn btn-primary btn-lg">Estandarizar <i class="fa-solid fa-plus"></i></a>
+        <p class="pE">Estandarizar una nueva receta</p>
+        <a href="EsReceta.php" style="background-color: #FF6600;" class="btn btn-primary btn-lg">Estandarizar <i class="fa-solid fa-plus"></i></a>
     </div>
     <div class="col-4 d-block">
-        <p class="pE">Deseas Sugerir una nueva Receta</p>
-        <a href="Sugerir.php" class="btn btn-primary btn-lg">Sugerir Receta <i class="fa-solid fa-cheese"></i></a>
+        <p class="pE">Sugerir una nueva Receta</p>
+        <a href="Sugerir.php" style="background-color: #FF6600;" class="btn btn-primary btn-lg">Sugerir Receta <i class="fa-solid fa-cheese"></i></a>
     </div>
     <div class="col-4 d-block">
-        <p class="pE">Ver listado de Sugerencia de Recetas creada por aprendices</p>
-        <a href="Sugerencias.php" class="btn btn-primary btn-lg">Ver Sugerencias <i class="fa-solid fa-list"></i></a>
+        <p class="pE">Listado de Sugerencia de Recetas</p>
+        <a href="Sugerencias.php" style="background-color: #FF6600;" class="btn btn-primary btn-lg">Ver Sugerencias <i class="fa-solid fa-list"></i></a>
     </div>
     </div>
 </div>
