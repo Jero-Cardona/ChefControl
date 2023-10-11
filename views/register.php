@@ -18,39 +18,47 @@ include('../libraries/conexion.php');
       <div class="encabezado">
             <h1 class="titulo">Registro Usuarios</h1>
       </div>
-    <form>
+    <form method="POST" action="../models/user.php">
         <div class="row">
           <div class="col-6">
-            <h5>Ingrese sus nombres</h5>
-            <input type="text" class="form-control input" placeholder="Nombre" name="Nombre">
+            <h5>Ingrese su Documento</h5>
+            <input type="tel" class="form-control input" placeholder="Numero Documento" name="Id_Empleado">
           </div>
           <div class="col-6">
-            <h5>Ingrese sus Apellidos</h5>
-            <input type="text" class="form-control input" placeholder="Apellido" name="Apellido">
+            <h5>Ingrese sus Nombres</h5>
+            <input type="text" class="form-control input" placeholder="Nombres" name="Nombre">
           </div>
         </div>
         <br>
         <br>
         <div class="row">
           <div class="col-6">
-              <h5>Ingrese su Teléfono</h5>
-                <input type="tel" class="form-control input" placeholder="Teléfono" name="Telefono">
+              <h5>Ingrese sus Apellidos</h5>
+                <input type="text" class="form-control input" placeholder="Apellidos" name="Apellido">
             </div>
             <div class="col-6">
-              <h5>Ingrese su Número de Documento</h5>
-                <input type="tel" class="form-control input" placeholder="Numero de documento" name="Id_Empleado">
+              <h5>Ingrese su Telefono</h5>
+                <input type="tel" class="form-control input" placeholder="Numero de Telefono" name="Telefono">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-12">
+              <h5 style="text-align: center;">Ingrese su Rol </h5>
+                <input type="tel" class="form-control input" placeholder="Numero Rol" name="Id_Rol">
             </div>
         </div>
           <br>
           <br>
+          <div class="row">
+            <div class="col-6">
+            <input type="submit" class="boton" value="Enviar Datos" style="justify-self: center; font-family: fantasy; color: white; border-radius: 10px; margin-bottom: 50px;">
+            </div>
+            <div class="col-6">
+              <button class="boton"><a style="color:white;" href="index/index.php">Volver</a></button>
+            </div>
         </form> 
-        <div class="row">
-          <div class="col-6">
-              <button class="boton" name="EnviarD" type="submit">Enviar</button>
-          </div>
-          <div class="col-6">
-            <button class="boton"><a style="color:white;" href="index/index.php">Volver</a></button>
-          </div>
         </div>
     </div>
 </body>
