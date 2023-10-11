@@ -1,29 +1,30 @@
 <?php
 require_once '../libraries/conexion.php';
 
-if(!empty($_POST["EnviarDatos"])) {
-  if (empty($_POST["Id_Empleado"]) or empty($_POST["Nombre"]) or empty($_POST["Apellido"]) or empty($_POST["Telefono"]) or empty($_POST["Id_Rol"])) {
-
-    echo "Uno de los campos está vació. Llenelo, por favor."; 
-
-  }else{
-
-    $id_empleado=$_POST["Id_Empleado"];
-    $nombre=$_POST["Nombre"];
-    $apellido=$_POST["Apellido"];
-    $telefono=$_POST["Telefono"];
-    $id_rol=$_POST["Id_Rol"];
-
-    $sql=$mysql->query(" INSERT INTO tbl_usuarios(Id_Empleado,Nombre,Apellido,Telefono,Id_Rol) VALUES ('$id_empleado','$nombre','$apellido','$telefono','$id_rol') ");
-    if($sql==1){
-      echo "Usuario registrado correctamente.";
-
-    }else{
-      echo "Usuario no registrado. Hay un error";
-    }
-
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  
+  // Obtiene los datos del formulario POST y los escapa para evitar problemas de seguridad
+  $Id_Empleado = mysqli_real_escape_string($mysql, $_POST["Id_Empleado"]);
+  $Nombre = mysqli_real_escape_string($mysql, $_POST["Nombre"]); // Corregir el nombre aquí
+  $Apellido = mysqli_real_escape_string($mysql, $_POST["Apellido"]);
+  $Telefono = mysqli_real_escape_string($mysql, $_POST["Telefono"]);
+  $Id_Rol = mysqli_real_escape_string($mysql, $_POST["Id_Rol"]);
+  // Consulta SQL con valores escapados
+  $sql = "INSERT INTO tbl_usuarios(Id_Empleado,Nombre,Apellido,Telefono,Id_Rol)
+          VALUES ('$Id_Empleado', '$Nombre', '$Apellido', '$Telefono', '$Id_Rol')";
+  
+  // Ejecutar la consulta
+  if (mysqli_query($mysql, $sql)) {
+      echo "Los datos se insertaron correctamente.";
+  } else {
+      echo "Problemas al insertar datos: " . mysqli_error($mysql);
   }
-
+  
+  // Cerrar la conexión
+  mysqli_close($mysql);
+} else {
+  echo "No se han enviado datos a través del formulario ";
 }
+
 
 ?>
