@@ -1,14 +1,14 @@
 <?php
-require_once '../libraries/conexion.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  
+  require_once '../libraries/conexion.php';
   // Obtiene los datos del formulario POST y los escapa para evitar problemas de seguridad
-  $Id_Empleado = mysqli_real_escape_string($mysql, $_POST["Id_Empleado"]);
-  $Nombre = mysqli_real_escape_string($mysql, $_POST["Nombre"]); // Corregir el nombre aquí
-  $Apellido = mysqli_real_escape_string($mysql, $_POST["Apellido"]);
-  $Telefono = mysqli_real_escape_string($mysql, $_POST["Telefono"]);
-  $Id_Rol = mysqli_real_escape_string($mysql, $_POST["Id_Rol"]);
+  $Id_Empleado = mysqli($mysql, $_POST["Id_Empleado"]);
+  $Nombre = mysqli($mysql, $_POST["Nombre"]); // Corregir el nombre aquí
+  $Apellido = mysqli($mysql, $_POST["Apellido"]);
+  $Telefono = mysqli($mysql, $_POST["Telefono"]);
+  $Id_Rol = mysqli($mysql, $_POST["Id_Rol"]);
   // Consulta SQL con valores escapados
   $sql = "INSERT INTO tbl_usuarios(Id_Empleado,Nombre,Apellido,Telefono,Id_Rol)
           VALUES ('$Id_Empleado', '$Nombre', '$Apellido', '$Telefono', '$Id_Rol')";
