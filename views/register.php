@@ -53,7 +53,7 @@ include('../libraries/conexion.php');
           <br>
           <div class="row">
             <div class="col-6">
-            <input type="submit" class="boton" value="Enviar Datos" style="justify-self: center; font-family: fantasy; color: white; border-radius: 10px; margin-bottom: 50px;">
+            <input type="submit" class="boton" value="EnviarDatos" style="justify-self: center; font-family: fantasy; color: white; border-radius: 10px; margin-bottom: 50px;">
             </div>
             <div class="col-6">
               <button class="boton"><a style="color:white;" href="index/index.php">Volver</a></button>
